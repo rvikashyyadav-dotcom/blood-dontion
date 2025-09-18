@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeStream - Blood Donation Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+        }
+        
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blood-drop {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .form-input:focus {
+            border-color: #dc2626;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-heart-pulse text-red-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-red-600">LifeStream</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-red-600 font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-red-600 font-medium">About</a>
+                    <a href="#donate" class="text-gray-700 hover:text-red-600 font-medium">Donate</a>
+                    <a href="#locations" class="text-gray-700 hover:text-red-600 font-medium">Locations</a>
+                    <a href="#contact" class="text-gray-700 hover:text-red-600 font-medium">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                        Give Blood. <br>Save Lives.
+                    </h1>
+                    <p class="text-xl mb-8 opacity-90">
+                        Every drop counts. Join thousands of heroes who donate blood and make a difference in someone's life today.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#donate" class="bg-white text-red-600 font-bold py-3 px-8 rounded-lg text-center hover:bg-gray-100 transition duration-300">
+                            Donate Now
+                        </a>
+                        <a href="#locations" class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg text-center hover:bg-white hover:text-red-600 transition duration-300">
+                            Find Center
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://placehold.co/600x400" alt="Diverse group of happy blood donors and medical staff in a modern donation center with red accents and natural lighting" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg">
+                        <i class="fas fa-heart text-red-600 text-2xl blood-drop"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="stat-card bg-red-50 p-6 rounded-lg text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">10M+</div>
+                    <p class="text-gray-600">Lives Saved</p>
+                </div>
+                <div class="stat-card bg-red-50 p-6 rounded-lg text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">500K+</div>
+                    <p class="text-gray-600">Active Donors</p>
+                </div>
+                <div class="stat-card bg-red-50 p-6 rounded-lg text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">2.5M</div>
+                    <p class="text-gray-600">Donations/Yr</p>
+                </div>
+                <div class="stat-card bg-red-50 p-6 rounded-lg text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">98%</div>
+                    <p class="text-gray-600">Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Donate Blood?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Your donation can save up to 3 lives. Learn why blood donation is crucial and how you can help.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Quick & Easy</h3>
+                    <p class="text-gray-600">The entire process takes about an hour, and the actual donation only 8-10 minutes.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Safe Process</h3>
+                    <p class="text-gray-600">Sterile equipment and trained professionals ensure your safety throughout the process.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-gift text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Life-Saving Gift</h3>
+                    <p class="text-gray-600">Your single donation can help trauma patients, surgery patients, and cancer treatments.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://placehold.co/600x400" alt="Clean, modern blood donation center with comfortable donor chairs and professional medical staff assisting donors" class="rounded-2xl shadow-lg">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">The Donation Process</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">1</div>
+                            <p><strong>Registration:</strong> Complete donor registration and health history.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">2</div>
+                            <p><strong>Health Check:</strong> Quick health screening and mini-physical.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">3</div>
+                            <p><strong>Donation:</strong> Comfortable donation process (8-10 minutes).</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">4</div>
+                            <p><strong>Refreshments:</strong> Enjoy snacks and drinks while you recover.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form Section -->
+    <section id="donate" class="py-20 bg-red-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Become a Blood Donor</h2>
+                <p class="text-xl opacity-90">Join our community of life-savers. Register to donate today.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                <form class="space-y-6 text-gray-900">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none" placeholder="Enter your full name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none" placeholder="Enter your email">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none" placeholder="Enter your phone number">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Blood Type</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none">
+                                <option value="">Select blood type</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Date of Birth</label>
+                            <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Location</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none">
+                                <option value="">Select location</option>
+                                <option value="downtown">Downtown Center</option>
+                                <option value="westside">Westside Clinic</option>
+                                <option value="eastgate">Eastgate Donation</option>
+                                <option value="northridge">Northridge Hospital</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-red-600 focus:ring-red-500">
+                            <span class="ml-2 text-sm text-gray-600">I confirm that I meet all eligibility requirements</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="w-full bg-red-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-red-700 transition duration-300">
+                        Schedule Donation
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Find a Donation Center</h2>
+                <p class="text-xl text-gray-600">Convenient locations throughout the city. Walk-ins welcome!</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="mb-4">
+                        <img src="https://placehold.co/400x250" alt="Modern downtown blood donation center with glass facade and welcoming reception area" class="rounded-lg w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Downtown Center</h3>
+                    <p class="text-gray-600 mb-4">123 Main Street, Downtown</p>
+                    <div class="space-y-2 text-sm">
+                        <p><strong>Hours:</strong> Mon-Fri 8am-6pm, Sat 9am-4pm</p>
+                        <p><strong>Phone:</strong> (555) 123-4567</p>
+                    </div>
+                    <button class="w-full bg-red-600 text-white py-2 px-4 rounded-lg mt-4 hover:bg-red-700 transition duration-300">
+                        View Details
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="mb-4">
+                        <img src="https://placehold.co/400x250" alt="Bright suburban donation clinic with comfortable waiting area and friendly staff" class="rounded-lg w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Westside Clinic</h3>
+                    <p class="text-gray-600 mb-4">456 Oak Avenue, Westside</p>
+                    <div class="space-y-2 text-sm">
+                        <p><strong>Hours:</strong> Tue-Sat 9am-5pm</p>
+                        <p><strong>Phone:</strong> (555) 234-5678</p>
+                    </div>
+                    <button class="w-full bg-red-600 text-white py-2 px-4 rounded-lg mt-4 hover:bg-red-700 transition duration-300">
+                        View Details
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="mb-4">
+                        <img src="https://placehold.co/400x250" alt="Hospital-based donation center with state-of-the-art equipment and medical professionals" class="rounded-lg w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Northridge Hospital</h3>
+                    <p class="text-gray-600 mb-4">789 Pine Road, Northridge</p>
+                    <div class="space-y-2 text-sm">
+                        <p><strong>Hours:</strong> Open 24/7</p>
+                        <p><strong>Phone:</strong> (555) 345-6789</p>
+                    </div>
+                    <button class="w-full bg-red-600 text-white py-2 px-4 rounded-lg mt-4 hover:bg-red-700 transition duration-300">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Get answers to common questions about blood donation.</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold mb-3">Who can donate blood?</h3>
+                    <p class="text-gray-600">Most people in good health, at least 17 years old (16 with parental consent in some states), and weighing at least 110 pounds can donate. Specific eligibility criteria apply.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold mb-3">How often can I donate?</h3>
+                    <p class="text-gray-600">You can donate whole blood every 56 days. Platelet donors can give more frequently - up to 24 times a year.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold mb-3">Does it hurt?</h3>
+                    <p class="text-gray-600">You may feel a brief pinch when the needle is inserted, but most donors report feeling only minor discomfort during the donation process.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold mb-3">How long does it take?</h3>
+                    <p class="text-gray-600">The entire process takes about an hour, with the actual donation taking only 8-10 minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-heart-pulse text-red-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">LifeStream</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Saving lives through blood donation. Join our community of heroes.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#donate" class="text-gray-400 hover:text-white transition">Donate</a></li>
+                        <li><a href="#locations" class="text-gray-400 hover:text-white transition">Locations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Eligibility</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blood Types</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-phone mr-2"></i> (555) 123-HELP</p>
+                        <p><i class="fas fa-envelope mr-2"></i> help@lifestream.org</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> 123 Healthcare Ave</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 LifeStream Blood Donation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Simple form validation
+        document.querySelector('form') ? .addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest in donating blood! We will contact you shortly to schedule your appointment.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
